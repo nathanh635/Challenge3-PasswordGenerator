@@ -46,10 +46,12 @@ let characters = "";
 let totalChars = 0;
 let charnumber = 0;
 let numericChars = "", lowerChars = "", upperChars = "";
+let num = 0, up = 0, low = 0, spec = 0;
 
 if (lowerCase==true) {
   for (let j = 97; j < 123; j++) {
     characters += String.fromCharCode(j);
+    lowerChars += String.fromCharCode(j);
         totalChars +=1
     } 
 
@@ -58,6 +60,7 @@ if (lowerCase==true) {
 if (upperCase==true) {
   for (let k = 65; k < 91; k++) {
   characters += String.fromCharCode(k);
+  upperChars += String.fromCharCode(k);
   totalChars +=1
   } 
 
@@ -66,6 +69,7 @@ if (upperCase==true) {
 if (numeric==true) {
   for (let l = 48; l < 57; l++) {
     characters += String.fromCharCode(l);
+    numericChars += String.fromCharCode(l);
     totalChars +=1
     } 
 
@@ -84,13 +88,26 @@ if (lowerCase==false && upperCase == false && numeric == false && special == fal
 
 let pass = "";
 
-
-
+function randomPass() {}
 for (let i = 0; i < length; i++) {
   charNumber = Math.floor(Math.random()*totalChars);
   pass += characters.charAt(charNumber);
 }
+}
 
+if (lowerCase == true) {
+
+
+}
+else if {numeric == true) {
+
+}
+else if {upperCase == true) {
+
+}
+else if {special == true) {
+
+}
 
 
 return pass;
